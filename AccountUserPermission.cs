@@ -11,6 +11,7 @@ namespace Api.Database.Models
         READ_ONLY = 3,
         
     }
+    
     public class AccountUserPermission
     {
         [Key]
