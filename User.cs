@@ -23,5 +23,6 @@ namespace Api.Database.Models
         public DateTime CreatedAt { get; set; }
         public ICollection<Account> Accounts { get; set; }
         public ICollection<AccountUserInvitation> AccountUserInvitations { get; set; }
+        public ICollection<AccountUserPermission> AccountUserPermissions { get; set; }
     }
 }

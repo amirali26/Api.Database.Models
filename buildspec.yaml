@@ -1,0 +1,19 @@
+version: 0.2
+phases:
+  install:
+    runtime-version:
+      dotnet: latest
+  pre_build:
+    commands:
+      - echo login to code artifact
+      - aws codeartifact login --tool dotnet --repository helpmycase-backend --domain helpmycase-backend --domain-owner 460234074473
+  build:
+    commands:
+      - echo Build dotnet application
+      - dotnet build
+      - echo Pack nuget package
+      - dotnet pack
+  post_build:
+    commands:
+      - echo Nuget add source
+      - dotnet nuget add source "https://helpmycase-backend-460234074473.d.codeartifact.eu-west-1.amazonaws.com/nuget/helpmycase-backend/v3/index.json" -n codeartifact      
