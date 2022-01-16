@@ -12,8 +12,10 @@ phases:
       - echo Build dotnet application
       - dotnet build
       - echo Pack nuget package
-      - dotnet pack
+      - dotnet pack --version-suffix $CODEBUILD_BUILD_NUMBER;
   post_build:
     commands:
       - echo Nuget add source
-      - dotnet nuget add source "https://helpmycase-backend-460234074473.d.codeartifact.eu-west-1.amazonaws.com/nuget/helpmycase-backend/v3/index.json" -n codeartifact      
+      - dotnet nuget add source "https://helpmycase-backend-460234074473.d.codeartifact.eu-west-1.amazonaws.com/nuget/helpmycase-backend/v3/index.json" -n codeartifact
+      - echo Nuget push
+      - dotnet nuget push bin/Debug/Api.Database.Models.1.0.$CODEBUILD_BUILD_NUMBER.nupkg Api.Database.MySql.csproj --source codeartifact 
