@@ -1,7 +1,4 @@
 version: 0.2
-env:
-  variables:
-    FILE_PATH: "bin/Debug/Api.Database.Models.1.0.${CODEBUILD_BUILD_NUMBER}.nupkg"
 phases:
   install:
     runtime-version:
@@ -21,5 +18,6 @@ phases:
       - echo Sources
       - dotnet nuget list source
       - echo Nuget push
-      - echo $FILE_PATH
+      - echo "bin/Debug/Api.Database.Models.1.0.${CODEBUILD_BUILD_NUMBER}.nupkg"
+      - echo bin/Debug/Api.Database.Models.1.0.$CODEBUILD_BUILD_NUMBER.nupkg
       - dotnet nuget push FILE_PATH Api.Database.MySql.csproj --source helpmycase-backend/helpmycase-backend
