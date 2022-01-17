@@ -21,4 +21,5 @@ phases:
       - echo Sources
       - dotnet nuget list source
       - echo Nuget push
+      - echo $FILE_PATH
       - dotnet nuget push FILE_PATH Api.Database.MySql.csproj --source helpmycase-backend/helpmycase-backend
