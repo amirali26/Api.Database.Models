@@ -20,7 +20,7 @@ phases:
     commands:
       - echo Nuget add source
       - dotnet nuget add source "https://helpmycase-backend-460234074473.d.codeartifact.eu-west-1.amazonaws.com/nuget/helpmycase-backend/v3/index.json" -n codeartifact
-      - echo Nuget push
-      - dotnet nuget push $FILE_PATH Api.Database.MySql.csproj --source codeartifact
       - echo Sources
       - nuget sources
+      - echo Nuget push
+      - dotnet nuget push $FILE_PATH Api.Database.MySql.csproj --source codeartifact
