@@ -9,7 +9,6 @@ namespace Api.Database.Models
         ADMIN = 1,
         BASIC = 2,
         READ_ONLY = 3,
-        
     }
     
     public class AccountUserPermission
