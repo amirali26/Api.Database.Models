@@ -10,6 +10,7 @@ namespace Api.Database.Models
         PENDING = 0,
         REJECTED = 1,
         ACCEPTED = 2,
+        ACCOUNT_REJECTED = 3,
     }
     public class AccountUserInvitation
     {
