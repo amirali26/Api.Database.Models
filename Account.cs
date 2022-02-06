@@ -40,6 +40,6 @@ namespace Api.Database.Models
         public User CreatedBy { get; set; }
         public ICollection<User> Users { get; set; }
         public ICollection<AccountUserInvitation> AccountUserInvitations { get; set; }
-        public AccountUserPermission AccountUserPermission { get; set; }
+        public ICollection<AccountUserPermission> AccountUserPermissions { get; set; }
     }
 }
