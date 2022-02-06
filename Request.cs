@@ -17,7 +17,9 @@ namespace Api.Database.Models
         public AreasOfPractice Topic { get; set; }
         public DateTime CreatedDate { get; set; }
         public Client Client { get; set; }
-
+        public string PostCode { get; set; }
+        public string Region { get; set; }
+        public string AreaInRegion { get; set; }
         public ICollection<Enquiry> Enquiries { get; set; }
     }
 }
