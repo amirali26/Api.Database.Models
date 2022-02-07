@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Runtime.CompilerServices;
 using HotChocolate;
 
 namespace Api.Database.Models
@@ -12,9 +13,9 @@ namespace Api.Database.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [GraphQLIgnore]
         public string Id { get; set; }
+        public string RequestNumber { get; set; }
         [GraphQLName("id")] public string ExternalId { get; set; }
         public string Description { get; set; }
-        public string OrderNumber { get; set; }
         public AreasOfPractice Topic { get; set; }
         public DateTime CreatedDate { get; set; }
         public Client Client { get; set; }
