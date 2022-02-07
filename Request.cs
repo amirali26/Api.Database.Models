@@ -14,6 +14,7 @@ namespace Api.Database.Models
         public string Id { get; set; }
         [GraphQLName("id")] public string ExternalId { get; set; }
         public string Description { get; set; }
+        public string OrderNumber { get; set; }
         public AreasOfPractice Topic { get; set; }
         public DateTime CreatedDate { get; set; }
         public Client Client { get; set; }
