@@ -5,7 +5,7 @@ namespace Api.Database.Models
 {
     public interface IRequest
     {
-        string Id { get; set; }
+        int Id { get; set; }
         string ExternalId { get; set; }
         Client Client { get; set; }
 

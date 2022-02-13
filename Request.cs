@@ -12,8 +12,8 @@ namespace Api.Database.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [GraphQLIgnore]
-        public string Id { get; set; }
-        public string RequestNumber { get; set; }
+        public int Id { get; set; }
+        public int RequestNumber { get; set; }
         [GraphQLName("id")] public string ExternalId { get; set; }
         public string Description { get; set; }
         public AreasOfPractice Topic { get; set; }
