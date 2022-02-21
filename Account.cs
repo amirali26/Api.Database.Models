@@ -32,6 +32,9 @@ namespace Api.Database.Models
         public string Website { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
+        public string PostCode { get; set; }
+        public string Region { get; set; }
+        public string AreaInRegion { get; set; }
         [Column(TypeName = "nvarchar(24)")]
         public AccountType Size { get; set; }
         public DateTime RegisteredDate { get; set; }
