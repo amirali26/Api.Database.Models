@@ -35,6 +35,8 @@ namespace Api.Database.Models
         public string PostCode { get; set; }
         public string Region { get; set; }
         public string AreaInRegion { get; set; }
+        public string FirmVerified { get; set; }
+        public string FirmVerificationCode { get; set; }
         [Column(TypeName = "nvarchar(24)")]
         public AccountType Size { get; set; }
         public DateTime RegisteredDate { get; set; }
