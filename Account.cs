@@ -29,16 +29,25 @@ namespace Api.Database.Models
         public int Id { get; set; }
         [GraphQLName("id")] public string ExternalId { get; set; }
         public string Name { get; set; }
+        [Required(ErrorMessage = "Website is required")]
         public string Website { get; set; }
+        [Required(ErrorMessage = "Phone number is required")]
+        [RegularExpression("^[0-9]*$", ErrorMessage = "Please enter a valid phone number")]
         public string PhoneNumber { get; set; }
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Please enter a valid email address")]
         public string Email { get; set; }
+        [Required(ErrorMessage = "Postcode is required")]
         public string PostCode { get; set; }
+        [Required(ErrorMessage = "Region is required")]
         public string Region { get; set; }
+        [Required(ErrorMessage = "Area in region is required")]
         public string AreaInRegion { get; set; }
         public bool FirmVerified { get; set; }
         public string FirmVerificationCode { get; set; }
         [Column(TypeName = "nvarchar(24)")]
         public AccountType Size { get; set; }
+        [Required(ErrorMessage = "Registration date is required")]
         public DateTime RegisteredDate { get; set; }
         public DateTime CreatedAt { get; set; }
         [InverseProperty("CreatedAccounts")] 

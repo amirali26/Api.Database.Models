@@ -18,10 +18,12 @@ namespace Api.Database.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [GraphQLIgnore]
         public int Id { get; set; }
-
         [GraphQLName("id")] public string ExternalId { get; set; }
-
+        [Required(ErrorMessage = "Please provide an enquiry message")]
+        [MaxLength(300, ErrorMessage = "Enquiry message too long")]
+        [MinLength(50, ErrorMessage = "Enquiry Message too short")]
         public string Message { get; set; }
+        [Required]
         public int InitialConsultationFee { get; set; }
         public int? EstimatedPrice { get; set; }
         public bool OfficeAppointment { get; set; }
@@ -30,8 +32,11 @@ namespace Api.Database.Models
         public DateTime CreatedAt { get; set; }
         [Column(TypeName = "nvarchar(24)")] 
         public Status Status { get; set; }
+        [Required]
         public Request Request { get; set; }
+        [Required]
         public Account Account { get; set; }
+        [Required]
         public User User { get; set; }
     }
 }

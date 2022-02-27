@@ -19,10 +19,14 @@ namespace Api.Database.Models
         [GraphQLIgnore]
         public int Id { get; set; }
         [GraphQLName("id")] public string ExternalId { get; set; }
+        [Required(ErrorMessage = "User email is required")]
         public string UserEmail { get; set; }
+        [Required(ErrorMessage = "Referer user is required")]
         public User ReferUser { get; set; }
+        [Required(ErrorMessage = "Account is requited")]
         public Account Account { get; set; }
         public DateTime CreatedAt { get; set; }
+        [Required(ErrorMessage = "Status is required")]
         public AccountUserInvitationStatus Status { get; set; }
     }
 }
