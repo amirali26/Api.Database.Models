@@ -17,11 +17,8 @@ namespace Api.Database.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [GraphQLIgnore]
         public int Id { get; set; }
-        [Required(ErrorMessage = "Account is required")]
         public Account Account { get; set; }
-        [Required(ErrorMessage = "User is required")]
         public User User { get; set; }
-        [Required(ErrorMessage = "Permission is required")]
         public AccountPermission AccountPermission { get; set; }
     }
 }
