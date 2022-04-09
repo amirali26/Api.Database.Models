@@ -6,7 +6,7 @@ phases:
   pre_build:
     commands:
       - echo login to code artifact
-      - aws codeartifact login --tool dotnet --repository helpmycase-backend --domain helpmycase-backend --domain-owner 460234074473
+      - aws codeartifact login --tool npm --repository helpmycase --domain helpmycase --domain-owner 619680812856
   build:
     commands:
       - echo Build dotnet application
