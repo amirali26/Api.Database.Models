@@ -13,6 +13,7 @@ phases:
       - dotnet build
       - echo Pack nuget package
       - dotnet pack --version 1.0.$CODEBUILD_BUILD_NUMBER;
+      - echo ${ls bin/Debug}
   post_build:
     commands:
       - echo Nuget push
