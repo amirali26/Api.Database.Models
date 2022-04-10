@@ -12,7 +12,8 @@ phases:
       - echo Build dotnet application
       - dotnet build --configuration Release
       - echo Pack nuget package
-      - dotnet pack -c Release --version-suffix $CODEBUILD_BUILD_NUMBER;
+      - dotnet pack -c Release;
+      - ls bin/Release
   post_build:
     commands:
       - echo Nuget push
