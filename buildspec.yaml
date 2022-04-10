@@ -10,10 +10,10 @@ phases:
   build:
     commands:
       - echo Build dotnet application
-      - dotnet build
+      - dotnet build -c Release
       - echo Pack nuget package
       - dotnet pack --version-suffix $CODEBUILD_BUILD_NUMBER;
   post_build:
     commands:
       - echo Nuget push
-      - dotnet nuget push bin/Debug/Api.Database.Models.1.0.1-$CODEBUILD_BUILD_NUMBER.nupkg --source helpmycase/helpmycase
+      - dotnet nuget push bin/Release/Api.Database.Models.1.0.1-$CODEBUILD_BUILD_NUMBER.nupkg --source helpmycase/helpmycase
