@@ -17,4 +17,4 @@ phases:
   post_build:
     commands:
       - echo Nuget push
-      - dotnet nuget push bin/Release/Api.Database.Models.1.0.1-$CODEBUILD_BUILD_NUMBER.nupkg --source helpmycase/helpmycase
+      - dotnet nuget push bin/Release/Api.Database.Models.1.0.$CODEBUILD_BUILD_NUMBER.nupkg --source helpmycase/helpmycase
