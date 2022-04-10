@@ -10,9 +10,9 @@ phases:
   build:
     commands:
       - echo Build dotnet application
-      - dotnet build -c Release
+      - dotnet build --configuration Release
       - echo Pack nuget package
-      - dotnet pack --version-suffix $CODEBUILD_BUILD_NUMBER;
+      - dotnet pack -c Release --version-suffix $CODEBUILD_BUILD_NUMBER;
   post_build:
     commands:
       - echo Nuget push
