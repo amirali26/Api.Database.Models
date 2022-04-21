@@ -11,6 +11,7 @@ namespace Api.Database.Models
     {
         public ICollection<Account> CreatedAccounts { get; set; }
         public ICollection<Enquiry> Enquiries { get; set; }
+        public ICollection<Account> DeletedAccounts { get; set; }
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [GraphQLIgnore]
