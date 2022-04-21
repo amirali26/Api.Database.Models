@@ -45,6 +45,7 @@ namespace Api.Database.Models
         [InverseProperty("CreatedAccounts")] 
         public User CreatedBy { get; set; }
         public bool Deleted { get; set; }
+        [InverseProperty("DeletedAccounts")] 
         public User DeletedBy { get; set; }
         public DateTime DeletedByDateTime { get; set; }
         public ICollection<User> Users { get; set; }
