@@ -22,6 +22,7 @@ namespace Api.Database.Models
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public string ImageUrl { get; set; }
+        public UserApproval UserApproval { get; set; }
         public DateTime CreatedAt { get; set; }
         public ICollection<Account> Accounts { get; set; }
         public ICollection<AccountUserInvitation> AccountUserInvitations { get; set; }
