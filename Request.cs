@@ -22,6 +22,7 @@ namespace Api.Database.Models
         public string PostCode { get; set; }
         public string Region { get; set; }
         public string AreaInRegion { get; set; }
+        public string ShowPhoneNumber { get; set; }
         public ICollection<Enquiry> Enquiries { get; set; }
     }
 }
