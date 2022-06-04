@@ -38,6 +38,7 @@ namespace Api.Database.Models
         public bool FirmVerified { get; set; }
         public string FirmVerificationCode { get; set; }
         public string ImageUrl { get; set; }
+        public string Address { get; set; }
         [Column(TypeName = "nvarchar(24)")]
         public AccountType Size { get; set; }
         public DateTime RegisteredDate { get; set; }
