@@ -19,6 +19,7 @@ namespace Api.Database.Models
         [GraphQLIgnore]
         public int Id { get; set; }
         [GraphQLName("id")] public string ExternalId { get; set; }
+        public int EnquiryNumber { get; set; }
         public string Message { get; set; }
         public int InitialConsultationFee { get; set; }
         public int? EstimatedPrice { get; set; }
